@@ -7,12 +7,13 @@ router.get('/', (req, res) => {
     axios.get('http://localhost:3000/api/all')
         .then((burgerData) => {
             // console.log(burgerData);
-            res.render("index", {burger_data: burgerData});
+            res.render("index", {burger_data: burgerData.data});
         })
         .catch((err) => {
             console.log(err);
         });
 });
+
 
 
 module.exports = {

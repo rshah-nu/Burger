@@ -9,9 +9,9 @@
                 {{#each burger_data}}
                     {{#unless this.devoured}}
                         <div class="col-xs-9 text-center">
-                            <pre>{{burger_data.id}}. {{this.burger_name}}
-					</pre>
-                            <!-- {{this.Date}} -->
+                            <pre>
+                                {{this.id}}. {{this.burger_name}}
+                            </pre>
                         </div>
                         <div class="col-xs-3 text-center">
                             <form class="devour-form button-size">

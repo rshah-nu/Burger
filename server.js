@@ -11,6 +11,7 @@ const environment = process.env.NODE_ENV || 'development';
 var PORT = process.env.EXPRESS_PORT || 3000;
 
 var app = express();
+console.log(__dirname)
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
@@ -18,7 +19,7 @@ app.use(bodyParser.json());
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-app.use(express.static("public"));
+app.use(express.static('public'));
 
 app.use('/', burgerHTML.router);
 app.use('/api', burgerAPI.router);
