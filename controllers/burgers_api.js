@@ -16,7 +16,7 @@ router.post('/new', (req, res) => {
     });
 });
 
-router.patch('/modify', (req, res) => {
+router.put('/modify', (req, res) => {
     var devoured = req.body.devoured;
     var burgerID = req.body.burgerID;
     burgerCommands.updateOneBurger(devoured, burgerID, (results) => {
