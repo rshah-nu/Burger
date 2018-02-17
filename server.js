@@ -8,7 +8,7 @@ const burgerAPI = require('./controllers/burgers_api')
 const burgerHTML = require('./controllers/burgers_html');
 
 const environment = process.env.NODE_ENV || 'development';
-var PORT = process.env.EXPRESS_PORT || 3000;
+var PORT = process.env.PORT || 3000;
 
 var app = express();
 console.log(__dirname)
