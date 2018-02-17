@@ -13,7 +13,7 @@ router.post('/new', (req, res) => {
     var userBurger = req.body.burgerName;
     burgerCommands.insertOneBurger(userBurger, (results) => {
         // res.json(results)
-        res.redirect('/')
+        return res.redirect('/')
     });
 });
 
@@ -22,9 +22,8 @@ router.put('/modify', (req, res) => {
     var devoured = req.body.devoured;
     var burgerID = req.body.burgerID;
     burgerCommands.updateOneBurger(devoured, burgerID, (results) => {
-        return res.redirect('/')
+        res.json(results)
     });
-
 });
 
 

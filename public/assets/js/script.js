@@ -12,7 +12,11 @@ $(document).ready(function () {
         $.ajax({
             type: 'PUT',
             url: '/api/modify',
-            data: devourObject
+            data: devourObject,
+            success: function () {
+            console.log("Edited");
+            location = '/';
+            }
         });
     });
     // $("#devourBtn").on("click", function(e) {
