@@ -4,7 +4,7 @@ var router = express.Router();
 const axios = require('axios');
 
 router.get('/', (req, res) => {
-    axios.get('http://localhost:3000/api/all')
+    axios.get('/api/all')
         .then((burgerData) => {
             // console.log(burgerData);
             res.render("index", {burger_data: burgerData.data});
