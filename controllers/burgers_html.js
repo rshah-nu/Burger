@@ -4,7 +4,7 @@ var router = express.Router();
 const axios = require('axios');
 
 router.get('/', (req, res) => {
-    axios.get('/api/all')
+    axios.get('https://dry-journey-75930.herokuapp.com/api/all')
         .then((burgerData) => {
             // console.log(burgerData);
             res.render("index", {burger_data: burgerData.data});
